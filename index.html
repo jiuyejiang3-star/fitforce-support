@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FitForce サポート</title>
+<meta name="description" content="FitForce（AI食事＆筋トレ管理アプリ）のサポートページ。よくある質問・お問い合わせ窓口・利用規約・プライバシーポリシーの一覧。" />
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #131318;
+    --surface-2: #1c1c24;
+    --text: #f5f5f7;
+    --muted: #9c9ca5;
+    --line: #2a2a35;
+    --accent: #22d3ee;
+    --accent-2: #6366f1;
+    --gold: #fbbf24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+  a:hover { opacity: 0.75; }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header {
+    text-align: center;
+    padding: 24px 0 48px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .logo-mark {
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, #ffffff, #b0e8f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 12px;
+  }
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 4px; height: 22px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    border-radius: 2px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .contact-card {
+    background: linear-gradient(135deg, rgba(34,211,238,.08), rgba(99,102,241,.05));
+    border: 1px solid rgba(34,211,238,.2);
+  }
+  .contact-card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .contact-card .label {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .contact-card .value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent);
+    word-break: break-all;
+  }
+  .response {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  details {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    transition: background .2s;
+  }
+  details[open] {
+    background: var(--surface-2);
+    border-color: rgba(34,211,238,.25);
+  }
+  summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 0;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: 300;
+    transition: transform .2s;
+  }
+  details[open] summary::after {
+    content: "−";
+  }
+  .answer {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: #d4d4dc;
+    font-size: 15px;
+  }
+  .answer p { margin-bottom: 10px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .answer ol, .answer ul {
+    padding-left: 22px;
+    margin: 8px 0;
+  }
+  .answer li { margin-bottom: 4px; }
+  .answer strong { color: var(--text); }
+  .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--text);
+    transition: all .2s;
+  }
+  .link-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .link-card .arrow {
+    color: var(--accent);
+    font-size: 18px;
+  }
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .info-table th, .info-table td {
+    padding: 12px 0;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  .info-table th {
+    color: var(--muted);
+    font-weight: 500;
+    width: 35%;
+  }
+  footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); margin: 0 8px; }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(34,211,238,.12);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 40px 18px 64px; }
+    h2 { font-size: 19px; }
+    .card { padding: 20px; }
+    details { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">
+      <span class="logo-mark">F</span>
+      <span>FITFORCE</span>
+    </div>
+    <h1>サポート</h1>
+    <p class="sub">FitForce のご利用に関する窓口・FAQ・各種ご案内</p>
+  </header>
+
+  <!-- お問い合わせ -->
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="card contact-card">
+      <div class="row">
+        <div>
+          <div class="label">メールでのご連絡</div>
+          <a class="value" href="mailto:jiuyejiang3@gmail.com">jiuyejiang3@gmail.com</a>
+        </div>
+        <a href="mailto:jiuyejiang3@gmail.com?subject=FitForce%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" style="padding:10px 18px;background:var(--accent);color:#000;border-radius:10px;font-weight:600;font-size:14px;">メールを送る →</a>
+      </div>
+      <p class="response">
+        通常 2〜3 営業日以内にご返信いたします（土日祝・年末年始は除く）。<br />
+        お問い合わせの際は、<strong>iOSのバージョン・端末名・アプリのバージョン</strong>を併せてお知らせいただけるとスムーズです。
+      </p>
+    </div>
+  </section>
+
+  <!-- アプリ情報 -->
+  <section id="app-info">
+    <h2>アプリ情報</h2>
+    <div class="card">
+      <table class="info-table">
+        <tr><th>アプリ名</th><td>FitForce - AI食事＆筋トレ管理</td></tr>
+        <tr><th>対応OS</th><td>iOS 17.0 以降 / iPhone</td></tr>
+        <tr><th>カテゴリ</th><td>ヘルスケア／フィットネス</td></tr>
+        <tr><th>言語</th><td>日本語</td></tr>
+        <tr><th>料金</th><td>無料（アプリ内課金あり）</td></tr>
+        <tr><th>開発者</th><td>sho hisano</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section id="faq">
+    <h2>よくある質問</h2>
+
+    <details>
+      <summary>サブスクリプションの解約方法を教えてください</summary>
+      <div class="answer">
+        <p>サブスクリプションの解約は <strong>iPhoneの「設定」アプリ</strong> から行います。FitForce アプリ内では解約できません。</p>
+        <ol>
+          <li>iPhoneの「<strong>設定</strong>」アプリを開く</li>
+          <li>一番上のあなたの名前（Apple ID）をタップ</li>
+          <li>「<strong>サブスクリプション</strong>」をタップ</li>
+          <li>「<strong>FitForce Pro</strong>」をタップ</li>
+          <li>「<strong>サブスクリプションをキャンセルする</strong>」をタップ</li>
+        </ol>
+        <p>解約は次回更新日の <strong>24時間以上前</strong> に行ってください。更新日を過ぎると次の期間分が請求されます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>料金プランを教えてください</summary>
+      <div class="answer">
+        <p><strong>FitForce Pro</strong> は以下の2プランです（いずれも自動更新）。</p>
+        <ul>
+          <li><strong>月額プラン</strong>：¥580 / 月</li>
+          <li><strong>年額プラン</strong>：¥4,800 / 年（月額換算で約31%お得）</li>
+        </ul>
+        <p>料金はApple IDアカウントに請求されます。期間終了の24時間前までに自動更新をオフにしない限り、同額で自動更新されます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Proプランで何ができるようになりますか？</summary>
+      <div class="answer">
+        <p>無料版では1日あたりの利用回数に制限がある以下の機能が、すべて無制限になります。</p>
+        <ul>
+          <li>食事写真からのAI栄養解析（PFC・カロリー自動算出）</li>
+          <li>AI筋トレメニュー生成</li>
+          <li>AIによる1日のレビュー＆翌日の提案</li>
+          <li>AIによる筋トレフォーム評価</li>
+          <li>週次AIレビュー</li>
+          <li>マイルーティン保存（無制限）</li>
+          <li>マイ食事テンプレ追加（無制限）</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>購入を復元するには？</summary>
+      <div class="answer">
+        <p>機種変更後やアプリを再インストールした際に、過去に購入したサブスクリプションを復元できます。</p>
+        <ol>
+          <li>FitForce アプリを起動</li>
+          <li>有料機能を一度タップしてアップグレード画面を表示</li>
+          <li>画面下部の「<strong>購入を復元</strong>」ボタンをタップ</li>
+        </ol>
+        <p>復元には購入時と<strong>同じApple ID</strong>でiPhoneにサインインしている必要があります。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>記録したデータはどこに保存されますか？</summary>
+      <div class="answer">
+        <p>食事・筋トレ・体重などの記録は <strong>iPhone本体（端末内）</strong> に保存されます。当社サーバーには保存されません。</p>
+        <p>そのため、機種変更時にデータを移行するには現時点では対応していません（今後のアップデートでクラウドバックアップに対応予定です）。</p>
+        <p>AI評価機能を利用した際のみ、評価対象のデータ（食事内容・運動内容・身長・体重・年齢など）がGoogleの生成AI（Gemini）に送信されますが、氏名・メールアドレスなどの個人特定情報は一切送信されません。詳しくは<a href="https://jiuyejiang3-star.github.io/fitforce-privacy/">プライバシーポリシー</a>をご確認ください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>記録したデータを削除したい</summary>
+      <div class="answer">
+        <p>個別の記録は、各画面（食事タブ・筋トレタブ・カレンダー）から長押し or スワイプで削除できます。</p>
+        <p><strong>すべてのデータを一括削除</strong>したい場合は、iPhoneの「設定 → 一般 → iPhoneストレージ → FitForce → Appを削除」でアプリごと削除してください。アプリを削除すると端末内のすべての記録も同時に削除されます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>AI解析の結果が実際と違う気がします</summary>
+      <div class="answer">
+        <p>AIによる栄養解析は <strong>あくまで推定値</strong> であり、医療目的の正確な計測には使用できません。複雑な料理や写真の写り方によって誤差が出ることがあります。</p>
+        <p>気になる場合は、解析結果画面で <strong>「修正する」</strong> ボタンから手動で値を編集できます。</p>
+        <p>明らかにおかしい結果が頻繁に出る場合は、可能であればその食事写真と解析結果のスクリーンショットを添えて <a href="mailto:jiuyejiang3@gmail.com">jiuyejiang3@gmail.com</a> までお知らせいただけると改善に役立ちます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>アプリが落ちる・動作がおかしい</summary>
+      <div class="answer">
+        <p>以下をお試しください。</p>
+        <ol>
+          <li>アプリを<strong>完全終了</strong>して再起動（ホーム画面から上スワイプ＆スワイプアップで終了）</li>
+          <li>iPhone自体を<strong>再起動</strong></li>
+          <li>App Storeで FitForce の<strong>最新バージョンに更新</strong></li>
+          <li>iOSを最新版に更新（設定 → 一般 → ソフトウェアアップデート）</li>
+        </ol>
+        <p>それでも解消しない場合は、お使いの iPhone モデル・iOS バージョン・アプリバージョン・発生する操作手順を添えて <a href="mailto:jiuyejiang3@gmail.com">jiuyejiang3@gmail.com</a> までご連絡ください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>退会・アカウント削除をしたい</summary>
+      <div class="answer">
+        <p>FitForce ではアカウント登録は不要です。すべてのデータは端末内に保存されているため、<strong>アプリを削除いただくだけで退会・データ削除が完了</strong>します。</p>
+        <p>有料プランをご利用中の場合は、先に上記「サブスクリプションの解約方法」を参照して解約を行った上でアプリを削除してください。</p>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- 関連リンク -->
+  <section id="links">
+    <h2>関連リンク</h2>
+    <div class="links">
+      <a class="link-card" href="https://jiuyejiang3-star.github.io/fitforce-privacy/">
+        <span>プライバシーポリシー</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-card" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
+        <span>利用規約（EULA）</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-card" href="https://jiuyejiang3-star.github.io/fitforce-site/">
+        <span>製品ページ（LP）</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-card" href="https://apps.apple.com/account/subscriptions">
+        <span>サブスクリプション管理</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 sho hisano · FitForce</p>
+    <p style="margin-top:8px;">
+      <a href="mailto:jiuyejiang3@gmail.com">お問い合わせ</a>·
+      <a href="https://jiuyejiang3-star.github.io/fitforce-privacy/">プライバシー</a>·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
